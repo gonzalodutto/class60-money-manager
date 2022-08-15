@@ -13,11 +13,15 @@ export const balanceSlice = createSlice({
       console.log("Hello from the reducer!");
       state.amount = state.amount + action.payload;
     },
+    withdraw: (state, action) => {
+      console.log("Hello from the reducer!");
+      state.amount = state.amount - action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
 // as we add cases to our reducer we will also export the corresponding actions
-export const { deposit } = balanceSlice.actions;
+export const { deposit, withdraw } = balanceSlice.actions;
 
 export default balanceSlice.reducer;
