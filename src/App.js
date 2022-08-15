@@ -1,4 +1,4 @@
-import { deposit } from "./store/balance/slice";
+import { deposit, withdraw } from "./store/balance/slice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectBalance } from "./store/balance/selectors";
 
@@ -15,6 +15,13 @@ function App() {
         }}
       >
         Deposit 10$
+      </button>
+      <button
+        onClick={() => {
+          dispatch(withdraw(7));
+        }}
+      >
+        Withdraw 7$
       </button>
     </div>
   );
